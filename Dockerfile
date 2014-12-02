@@ -16,13 +16,11 @@ RUN yum -y install --enablerepo=epel \
   mysql-community-client.x86_64
 
 # Edit mysql config, bind to alll interfaces
+RUN echo "[mysqld]" >> /etc/my.cnf && echo "bind-address=0.0.0.0" >> /etc/my.cnf && echo "port=3306" >> /etc/my.cnf && echo "skip_name_resolve" >> /etc/my.cnf
 RUN sed -i -e 's/^socket\s*=\(.*\)$/#socket=\1/' /etc/my.cnf
-#RUN sed -i -e"s/^bind-address\s*=\s*127.0.0.1/bind-address = 0.0.0.0/" /etc/my.cnf
-RUN echo "bind-address=0.0.0.0" >> /etc/my.cnf && echo "port=3306" >> /etc/my.cnf
 
 ADD ./startup.sh /startup.sh
 RUN chmod 755 /startup.sh
 
 EXPOSE 3306
-
 CMD ["/startup.sh"]
