@@ -8,7 +8,7 @@ Based on the official CentOS 6 container: [![https://registry.hub.docker.com/_/c
 
 ## Build
 
-Change the MySQL admin account password created in build.sh to something else, then run "build.sh", or:
+Change the MySQL admin account password created in startup.sh to something else, then run "build.sh", or:
 ```
 docker build -t mysql .
 ```
