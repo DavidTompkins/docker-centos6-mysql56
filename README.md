@@ -4,7 +4,7 @@ Docker container for MySQL Community 5.6.22 running on CentOS 6 minimal, using d
 
 ## Dependencies
 
-Based on the official CentOS 6 container: [![https://registry.hub.docker.com/_/centos/](https://registry.hub.docker.com/\/centos/)](https://registry.hub.docker.com/\/centos/)
+Based on the official CentOS 6 container: [![https://registry.hub.docker.com/_/centos/](https://registry.hub.docker.com/_/centos/)](https://registry.hub.docker.com/_/centos/)
 
 ## Build
 
