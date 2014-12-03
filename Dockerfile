@@ -1,14 +1,11 @@
-FROM centos:centos6
+FROM centos6-base
 MAINTAINER David Tompkins <tompkins@adobe.com>
 
-# Install EPEL
+# Install EPEL repo
 RUN rpm -Uvh --force http://mirrors.kernel.org/fedora-epel/6/x86_64/epel-release-6-8.noarch.rpm
 
-# Install MySQL Community
+# Install MySQL Community repo
 RUN rpm -Uvh --force https://dev.mysql.com/get/mysql-community-release-el6-5.noarch.rpm
-
-# Update Current Image
-RUN yum install -y libcom_err && yum update -y
 
 # Install mysql from EPEL
 RUN yum -y install --enablerepo=epel \

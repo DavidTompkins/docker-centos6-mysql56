@@ -1,3 +1,3 @@
 #!/bin/sh
 
-docker build -t mysql .
+docker build -t centos6-mysql56 .
