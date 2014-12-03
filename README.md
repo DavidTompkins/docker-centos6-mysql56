@@ -30,7 +30,7 @@ See this issue for more information: [![https://github.com/docker/docker/issues/
 
 The script "mysql_client.sh" is an example of how to connect to MySQL after port mapping to localhost:3307 from VirtualBox:3306 with:
 ```
-VBoxManage controlvm boot2docker-vm natpf1 "name,tcp,127.0.0.1,3307,,3306"
+VBoxManage controlvm boot2docker-vm natpf1 "mysql,tcp,127.0.0.1,3307,,3306"
 ```
 
 ## License
