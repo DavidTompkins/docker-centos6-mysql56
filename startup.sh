@@ -30,7 +30,7 @@ if [ ! -d ${DATADIR}/mysql ]; then
 
   echo "creating admin user..."
 
-  echo "GRANT ALL PRIVILEGES ON *.* TO admin@'%' IDENTIFIED BY 'bluejay123' WITH GRANT OPTION; FLUSH PRIVILEGES;" | mysql -u root -v
+  echo "GRANT ALL PRIVILEGES ON *.* TO admin@'%' IDENTIFIED BY 'bluejay123' WITH GRANT OPTION; FLUSH PRIVILEGES;" | mysql -u root
 
   echo "halting mysql for configuration..."
 
