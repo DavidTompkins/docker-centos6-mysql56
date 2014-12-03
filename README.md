@@ -8,7 +8,7 @@ Based on the official CentOS 6 container: [![https://registry.hub.docker.com/\_/
 
 ## Build
 
-Change the MySql admin account password created in build.sh to something else, then run "build.sh", or:
+Change the MySQL admin account password created in build.sh to something else, then run "build.sh", or:
 ```
 docker build -t mysql .
 ```
@@ -25,7 +25,7 @@ Then, start the mysql container by running "run-server.sh", or:
 docker run -d -p 3306:3306 --volumes-from mysql-data mysql
 ```
 
-MySql will be exposed on port 3306 and it will use the data volume on /var/lib/mysql for persistence.
+MySQL will be exposed on port 3306 and it will use the data volume on /var/lib/mysql for persistence.
 
 Please read the Docker docs for data volumes to understand how this persistence works and how you would configure backups:
 
